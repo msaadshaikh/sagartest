@@ -28,7 +28,7 @@ pipeline {
        
             script {
             echo 'Cxone stage.'
-          //  sonarQubeScan()
+            sonarQubeScan()
         }
       
     }
@@ -40,7 +40,7 @@ pipeline {
        
           script {
            
-            buildApp()
+            //buildApp()
             echo 'Build completed using shared library function.'
         }
       
@@ -52,7 +52,7 @@ pipeline {
        
           script {
            
-            deployApp()
+           
             echo 'Deply completed using shared library function.'
         }
       
