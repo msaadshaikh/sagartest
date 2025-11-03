@@ -13,51 +13,38 @@ pipeline {
       }
     }
   
-  stage('CxOne CHECKMARX stage SAST SCA') {
+  stage('Quay stage') {
           steps {
        
             script {
             echo 'Cxone stage.'
-           // cxScan()
+            quay()
         }
       
     }
   }
-  stage('SONARQUBE stage') {
+  stage('Service Now') {
           steps {
        
             script {
-            echo 'Cxone stage.'
-          //  sonarQubeScan()
+            echo 'Service Now stage starting.'
+          //  serviceNowTicketStatus()
         }
       
     }
   }
-       
-
-       stage('Build') {
+   stage('Deploy') {
         steps {
        
           script {
            
-            buildApp()
+            deployApp()
             echo 'Build completed using shared library function.'
         }
       
     }
 }
 
- stage('Deploy') {
-        steps {
-       
-          script {
-           
-            deployApp()
-            echo 'Deply completed using shared library function.'
-        }
-      
-    }
-}
 
 
        
