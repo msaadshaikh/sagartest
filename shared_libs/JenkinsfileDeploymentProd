@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('CHECKOUT stage') {
+          steps {
+       
+            script {
+            echo 'this is checkout stage.'
+        }
+      
+      }
+    }
+  
+  stage('Service Now') {
+          steps {
+       
+            script {
+            echo 'ServiceNow stage.'
+           // serviceNowTicketStatus()
+        }
+      
+    }
+  }
+  
+       
+
+       
+
+ 
+
+
+       
+    }
+}
