@@ -18,12 +18,21 @@ pipeline {
        
             script {
             echo 'Cxone stage.'
-            cxOneSastSca()
+            //cxOneSastSca()
         }
       
     }
   }
- 
+   stage('SONARQUBE stage') {
+          steps {
+       
+            script {
+            echo 'Cxone stage.'
+            sonarQubeScan()
+        }
+      
+    }
+  }
        
 
        stage('Build') {
