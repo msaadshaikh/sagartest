@@ -18,7 +18,7 @@ pipeline {
        
             script {
             echo 'Cxone stage.'
-           // cxScan()
+            cxScan()
         }
       
     }
@@ -28,7 +28,7 @@ pipeline {
        
             script {
             echo 'Cxone stage.'
-          //  sonarQubeScan()
+            sonarQubeScan()
         }
       
     }
