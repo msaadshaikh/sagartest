@@ -13,16 +13,16 @@ pipeline {
       }
     }
   
-  //stage('Service Now') {
-    //      steps {
+    stage('Service Now') {
+          steps {
        
-      //      script {
-        //    echo 'ServiceNow stage.'
+            script {
+            echo 'ServiceNow stage.'
           //  serviceNowTicketStatus()
-       // }
+        }
       
-   // }
- // }
+    }
+  }
   
        
 
